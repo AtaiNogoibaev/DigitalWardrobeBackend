@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="6.1" author="atai nogoibaev" runOnChange="true">
+        <insert tableName="clothing_types">
+            <column name="typeName" value="other"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="jeans"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="pants"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="slacks"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="sweater"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="sweatshirt"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="hoodie"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="t-shirt"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="polo shirt"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="shirt"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="shoes"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="jacket"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="shorts"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="skirts"/>
+        </insert>
+        <insert tableName="clothing_types">
+            <column name="typeName" value="dresses"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,49 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="5.1" author="atai nogoibaev" runOnChange="true">
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="other"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="regular"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="slim"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="skinny"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="muscle"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="oversize"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="relaxed"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="tapered"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="straight"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="bootcut"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="loose"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="baggy"/>
+        </insert>
+        <insert tableName="clothing_fit">
+            <column name="fitValue" value="drop shoulder"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

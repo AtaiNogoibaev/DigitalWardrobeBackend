@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="8" author="atai nogoibaev" runOnChange="true">
+        <createTable tableName="collection_outfits">
+            <column name="id" type="UUID" defaultValueComputed="gen_random_uuid()">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="collectionId" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_collectionout_fits_collections" references="collections(id)"/>
+            </column>
+            <column name="outfitId" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_collection_outfits_outfits" references="outfits(id)"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

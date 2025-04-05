@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="10" author="atai nogoibaev" runOnChange="true">
+        <createTable tableName="outfit_items">
+            <column name="id" type = "UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="outfit_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_outfit_items_outfits" references="outfits(id)"/>
+            </column>
+            <column name="clothingitem_id" type="UUID">
+                <constraints nullable="true" foreignKeyName="fk_outfit_items_clothing_items" references="clothing_items(id)"/>
+            </column>
+            <column name="accessory_id" type="UUID">
+                <constraints nullable="true" foreignKeyName="fk_outfit_items_accessories" references="accessories(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

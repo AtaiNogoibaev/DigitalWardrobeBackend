@@ -1,0 +1,70 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="rename-columns-hibernate" author="atai nogoibaev" runOnChange="true">
+        <renameColumn
+                tableName="clothing_fit"
+                oldColumnName="fitValue"
+                newColumnName="fit_value" />
+        <renameColumn
+                tableName="clothing_types"
+                oldColumnName="typeName"
+                newColumnName="type_name" />
+        <renameColumn
+                tableName="accessories"
+                oldColumnName="userId"
+                newColumnName="user_id" />
+        <renameColumn
+                tableName="accessories"
+                oldColumnName="typeId"
+                newColumnName="type_id" />
+        <renameColumn
+                tableName="accessories"
+                oldColumnName="photoUrl"
+                newColumnName="photo_url" />
+        <renameColumn
+                tableName="accessories_types"
+                oldColumnName="typeName"
+                newColumnName="type_name" />
+        <renameColumn
+                tableName="clothing_items"
+                oldColumnName="typeId"
+                newColumnName="type_id" />
+        <renameColumn
+                tableName="clothing_items"
+                oldColumnName="userId"
+                newColumnName="user_id" />
+        <renameColumn
+                tableName="clothing_items"
+                oldColumnName="fitId"
+                newColumnName="fit_id" />
+        <renameColumn
+                tableName="clothing_items"
+                oldColumnName="photoUrl"
+                newColumnName="photo_url" />
+        <renameColumn
+                tableName="collection_outfits"
+                oldColumnName="outfitId"
+                newColumnName="outfit_id" />
+        <renameColumn
+                tableName="collection_outfits"
+                oldColumnName="collectionId"
+                newColumnName="collection_id" />
+        <renameColumn
+                tableName="collections"
+                oldColumnName="userId"
+                newColumnName="user_id" />
+        <renameColumn
+                tableName="outfits"
+                oldColumnName="userId"
+                newColumnName="user_id" />
+        <renameColumn
+                tableName="outfits"
+                oldColumnName="photoUrl"
+                newColumnName="photo_url" />
+    </changeSet>
+
+</databaseChangeLog>

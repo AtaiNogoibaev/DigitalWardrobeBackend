@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <include file="db/changelog/changesets/001-create-users-table.xml"/>
+    <include file="/db/changelog/changesets/004-create-accessories-types-table.xml"/>
+    <include file="/db/changelog/changesets/006-create-clothing-types-table.xml"/>
+    <include file="/db/changelog/changesets/005-create-clothing-fit-table.xml"/>
+
+    <include file="/db/changelog/changesets/004.1-insert-accessories-types-data.xml"/>
+    <include file="/db/changelog/changesets/005.1-insert-clothing-fit-data.xml"/>
+    <include file="/db/changelog/changesets/006.1-insert-clothing-types-data.xml"/>
+
+    <include file="/db/changelog/changesets/002-create-clothing-items-table.xml"/>
+    <include file="db/changelog/changesets/003-create-accessories-table.xml"/>
+
+    <include file="db/changelog/changesets/009-create-outfits-table.xml"/>
+    <include file="db/changelog/changesets/007-create-collections-table.xml"/>
+
+    <include file="/db/changelog/changesets/008-create-collection-outfits-table.xml"/>
+    <include file="db/changelog/changesets/010-create-outfit-items-table.xml"/>
+
+    <include file="/db/changelog/changesets/011-rename-columns-hibernate.xml"/>
+
+</databaseChangeLog>

@@ -1,0 +1,125 @@
+type User {
+  id: ID!
+  email: String
+  outfits: [Outfit]
+  collections: [Collection]
+}
+
+type ClothingItem {
+  id: ID!
+  userId: ID!
+  size: String
+  name: String
+  color: String
+  brand: String
+  photoUrl: String
+  clothingType: ClothingType
+  clothingFit: ClothingFit
+}
+
+type ClothingType {
+  id: Int!
+  typeName: String!
+}
+
+type ClothingFit {
+  id: Int!
+  fitValue: String!
+}
+
+type Accessory {
+  id: ID!
+  ownerId: ID!
+  name: String
+  color: String
+  brand: String
+  photoUrl: String
+  accessoryType: AccessoryType
+}
+
+type AccessoryType {
+  id: Int!
+  typeName: String!
+}
+
+type Outfit {
+  id: ID!
+  name: String
+  style: String
+  season: String
+  photoUrl: String
+  clothingItems: [ClothingItem]
+  accessories: [Accessory]
+}
+
+type Collection {
+  id: ID!
+  userId: ID!
+  name: String
+  outfitIds: [ID]
+}
+
+type Query {
+  userClothingItems: [ClothingItem]!
+  clothingItem(clothingItemId: ID!): ClothingItem
+  userAccessories: [Accessory]!
+  accessory(accessoryId: ID!): Accessory
+  userOutfits: [Outfit]!
+  outfitWithItems(outfitId: ID!): Outfit!
+  userCollections: [Collection]
+  userCollection(collectionId: ID!): Collection
+}
+
+input ClothingItemInput {
+  name: String!
+  color: String!
+  brand: String!
+  size: String!
+  photoUrl: String!
+  clothingTypeId: Int!
+  clothingFitId: Int!
+}
+
+input AccessoryInput {
+  name: String!
+  accessoryType: Int!
+  color: String!
+  brand: String!
+  photoUrl: String!
+}
+
+
+input OutfitInput {
+  name: String!
+  style: String
+  season: String
+  photoUrl: String
+  clothingItemsId: [ID]
+  accessoriesId: [ID]
+}
+
+input OutfitItemInput {
+  outfitId: ID!
+  clothingItemId: ID
+  accessoryId: ID
+}
+
+input CollectionInput {
+  name: String
+  outfitIds: [ID]
+}
+
+type Mutation {
+  addClothingItem(clothingItem: ClothingItemInput!): ClothingItem!
+  updateClothingItem(clothingItemId: ID!, clothingItem: ClothingItemInput!): ClothingItem!
+  deleteClothingItem(clothingItemId: ID!): Boolean!
+  addAccessory(accessory: AccessoryInput!): Accessory!
+  updateAccessory(accessoryId: ID!, accessory: AccessoryInput!): Accessory!
+  deleteAccessory(accessoryId: ID!): Boolean!
+  createOutfit(outfit: OutfitInput!): Outfit!
+  updateOutfit(outfitId: ID!, outfit: OutfitInput!): Outfit!
+  deleteOutfit(outfitId: ID!): Boolean!
+  createCollection(collection: CollectionInput!): Collection!
+  updateCollection(collectionId: ID!, collection: CollectionInput!): Collection!
+  deleteCollection(collectionId: ID!): Boolean!
+}

@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="4.1" author="atai nogoibaev" runOnChange="true">
+        <insert tableName="accessories_types">
+            <column name="typeName" value="other"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="glasses"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="gloves"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="hats"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="watches"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="necklace"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="rings"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="earrings"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="bracelets"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="belts"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="scarves"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="ties"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="socks"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="bags"/>
+        </insert>
+        <insert tableName="accessories_types">
+            <column name="typeName" value="wallets"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
